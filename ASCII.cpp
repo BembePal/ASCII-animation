@@ -53,10 +53,10 @@ int main() {
     maximize_console();
 
     std::vector<std::string> frames;
-    std::string base_path = "C:\\Users\\Bembe\\OneDrive\\Documents\\GIFS\\TEXTFILE\\";
+    std::string base_path = "C:\\Users\\YourName\\Documents\\GIFS\\TEXTFILE\\"; //Folder where you put your ascii textfiles
 
-    for (int i = 1; i < 134; ++i) {
-        std::string file_name = base_path + "ASCII-" + std::to_string(i) + ".txt";
+    for (int i = 1; i < 134; ++i) { //134 means that I have 133 textfile inside my folder
+        std::string file_name = base_path + "ASCII-" + std::to_string(i) + ".txt"; // this reads the content of your textfile then printed
         std::ifstream file(file_name);
         if (file) {
             std::string frame((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
@@ -68,11 +68,11 @@ int main() {
     }
 
 
-    std::cout << "Press Enter to start the animation..." << std::endl;
+    std::cout << "Press Enter to start the animation..." << std::endl; //waits until you press the ENTER key on you keyboard..
     std::cin.get();
 
     if (!frames.empty()) {
-        animate_ascii(frames, 0.0977);
+        animate_ascii(frames, 0.0977); //delay of each frame to be printed
     }
     else {
         std::cout << "No frames to display." << std::endl;
