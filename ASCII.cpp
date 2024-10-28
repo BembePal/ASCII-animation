@@ -56,7 +56,7 @@ int main() {
     std::string base_path = "C:\\Users\\YourName\\Documents\\GIFS\\TEXTFILE\\"; //Folder where you put your ascii textfiles
 
     for (int i = 1; i < 134; ++i) { //134 means that I have 133 textfile inside my folder
-        std::string file_name = base_path + "ASCII-" + std::to_string(i) + ".txt"; // IT READS THE ASCII-(1-133) NAMES OF YOU FILE REMEMBER TO CHANGE YOU NAME IN SEQUENCE TO PREVENT FRAME STUTTERING
+        std::string file_name = base_path + "ASCII-" + std::to_string(i) + ".txt"; // IT READS THE ASCII-(1-133) NAMES OF YOU FILE, REMEMBER TO CHANGE YOUR FILE NAME IN SEQUENCE TO PREVENT FRAME STUTTERING
         std::ifstream file(file_name);
         if (file) {
             std::string frame((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
